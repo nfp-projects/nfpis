@@ -6,9 +6,6 @@ jobs:
     environment:
       - di: "nfpis/nfpis"
       - dtag: "latest"
-      - service_name: "nfpis"
-      - target_port: "7021" # The target port on the docker software
-      - service_port: "3000" # The exposed public port
     working_directory: ~/nfpis
     steps:
       - run:
@@ -24,6 +21,20 @@ jobs:
           command: |
             docker login -u $DOCKER_USER -p $DOCKER_PASS
             docker push ${di}
+  deploy:
+    docker:
+      - image: docker:latest
+    environment:
+      - di: "nfpis/nfpis"
+      - dtag: "latest"
+      - service_name: "nfpis"
+      - target_port: "7021" # The public target port on the docker host
+      - service_port: "3000" # The exposed port on the docker
+    working_directory: ~/nfpis
+    steps:
+      - run:
+          name: Update and install SSH & Git
+          command: apk update && apk upgrade && apk add --no-cache bash openssh
       - deploy:
           name: Deploy to production
           command: |
@@ -42,3 +53,13 @@ workflows:
     jobs:
       - build:
           context: org-global
+          filters:
+            branches:
+              only: master
+      - deploy:
+          context: org-global
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
