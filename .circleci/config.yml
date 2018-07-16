@@ -7,8 +7,8 @@ jobs:
       - di: "nfpis/nfpis"
       - dtag: "latest"
       - service_name: "nfpis"
-      - target_port: "3000" # The target port on the docker software
-      - service_port: "7021" # The exposed public port
+      - target_port: "7021" # The target port on the docker software
+      - service_port: "3000" # The exposed public port
     working_directory: ~/nfpis
     steps:
       - run:
