@@ -1,0 +1,165 @@
+@require 'reset'
+@require 'fonts'
+
+body {
+  background: #eee;
+  color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+}
+
+#container {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  margin-top: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  max-height: 600px;
+  padding: 0 2em;
+  
+  h1 {
+    flex-grow: 2;
+    text-indent: -9999px;
+    padding-top: 96%;
+    background: url('./assets/logo.png') center no-repeat transparent;
+    background-size: contain;
+    max-width: 400px;
+  }
+}
+
+@media only screen and (max-width: 464px) {
+  header {
+    margin-top: 13.8%;
+  }
+}
+
+@media only screen and (min-width: 464px) {
+  header h1 {
+    align-self: center;
+    width: 400px;
+    height: 400px;
+    padding-top: 0;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3em;
+  flex-grow: 2;
+}
+
+section,
+aside {
+  display: flex;
+  flex-direction: column;
+  
+  & > * {
+    max-width: 600px;
+    align-self: center;
+    text-align: center;
+  }
+}
+
+section {
+  padding: 0.5em 1em 3em;
+
+  p {
+    font-size: 1.5em;
+    line-height: 1.2em;
+  }
+  
+  h5 {
+    margin-top: 1em;
+  }
+}
+
+aside {
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  background: #ddd;
+  padding: 1em 1em 0.6em;
+  margin: 2em 0 4em;
+  
+  span {
+    font-size: 0.9em;
+  }
+  
+  h3 {
+    font-size: 1.8em;
+    line-height: 2em;
+  }
+}
+
+.clients {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1em;
+  
+  .client {
+    margin: 0 0.6em;
+    padding: 1em 0;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 35px;
+    text-indent: -9999px;
+    
+    &.stjornarrad {
+      background-image: url('./assets/stjornarradid.svg');
+      width: 64px;
+    }
+    
+    &.aranja {
+      background-image: url('./assets/aranja.svg');
+      background-position: center 28px;
+      width: 100px;
+    }
+    
+    &.jokula {
+      background-image: url('./assets/jokula.png');
+      background-position: center 24px;
+      width: 120px;
+    }
+    
+    &.filadelfia {
+      background-image: url('./assets/filadelfia.png');
+      width: 67px;
+    }
+  }
+}
+
+footer {
+  flex-grow: 2;
+  display: flex;
+  align-items: flex-end;
+  
+  span {
+    flex-grow: 2;
+    text-align: center;
+    font-size: 0.8em;
+    color: #999;
+    line-height: 3em;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  section p {
+    font-size: 1.3em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  section p {
+    font-size: 1.1em;
+  }
+}

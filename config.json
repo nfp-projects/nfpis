@@ -1,0 +1,11 @@
+{
+  "name": "nfpis",
+  "production": {
+    "port": 3000,
+    "use_bunyan": true
+  },
+  "development": {
+    "port": 3000,
+    "use_bunyan": false
+  }
+}
