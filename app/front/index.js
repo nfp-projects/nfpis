@@ -40,7 +40,7 @@ const Front = {
           ]),
         ]),
         m('footer',
-          m('span', m.trust('Copyright &copy; 2018 NFP ehf.'))
+          m('span', m.trust('Copyright &copy; 2018 NFP ehf. :: Kennitala: 250689-2849 :: 0133-26-011111')),
         ),
       ]),
     ]
