@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run build:styl && npm run build:js",
-    "build:js": "browserify app/main.js -o public/main.js --debug",
-    "build:styl": "stylus -m app/styl/main.styl --out public",
+    "build:js": "browserify app/main.js | uglifyjs --comments -o public/main.js",
+    "build:styl": "stylus app/styl/main.styl -c --out public",
     "dev": "run-p watch:js watch:styl start",
     "dev:run": "npm install && npm run dev",
     "docker": "docker run -it --rm --name nfpis -p 3000:3000 -v \"$PWD\":/usr/src/app -w /usr/src/app node:slim",
@@ -32,9 +32,10 @@
     "mithril": "^1.1.6",
     "npm-run-all": "^4.1.3",
     "stylus": "^0.54.5",
+    "uglify-es": "^3.3.9",
     "watchify": "^3.11.0"
   },
   "dependencies": {
-    "spserver": "^0.2.0"
+    "spserver": "^0.3.0"
   }
 }

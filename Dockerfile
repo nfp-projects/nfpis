@@ -9,9 +9,7 @@ COPY package.json $HOME/
 
 WORKDIR $HOME
 
-RUN apk add --no-cache make gcc g++ python && \
-    npm install && \
-    apk del make gcc g++ python
+RUN npm install
 
 COPY app $HOME/app
 COPY public $HOME/public
@@ -30,9 +28,7 @@ COPY config.json package.json $HOME/
 
 WORKDIR $HOME
 
-RUN apk add --no-cache make gcc g++ python && \
-    npm install --production && \
-    apk del make gcc g++ python
+RUN npm install --production
 
 COPY --from=build /app/public $HOME/public
 
