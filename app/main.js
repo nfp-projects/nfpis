@@ -13,6 +13,30 @@
 window.components = {}
 
 const m = require('mithril')
-const Front = require('./front')
 
-m.mount(document.getElementById('container'), Front)
+m.route.setOrig = m.route.set
+m.route.set = function(path, data, options){
+  m.route.setOrig(path, data, options)
+  window.scrollTo(0, 0)
+}
+
+m.route.linkOrig = m.route.link
+m.route.link = function(vnode){
+  m.route.linkOrig(vnode)
+  window.scrollTo(0, 0)
+}
+
+const Front = require('./front')
+const Hosting = require('./hosting')
+const Programming = require('./programming')
+const Streaming = require('./streaming')
+const Footer = require('./footer')
+
+m.route.prefix = ''
+m.route(document.getElementById('container'), '/', {
+  '/': Front,
+  '/hosting-solutions': Hosting,
+  '/programming-solutions': Programming,
+  '/video-solutions': Streaming,
+})
+m.mount(document.getElementById('footer'), Footer)
