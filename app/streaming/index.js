@@ -22,7 +22,7 @@ var Streaming = {
           })
         },
       }, m('div.container', [
-          m('video', {
+          !vnode.state.isMobile ? m('video', {
               oncreate: function(subnode) {
                 vnode.state.domVideo = subnode.dom
                 Helper.checkCreated(vnode)
@@ -41,7 +41,12 @@ var Streaming = {
                 type: 'video/webm',
               }),
             ]
-          ),
+          ) : m('div', {
+                oncreate: function(subnode) {
+                  vnode.state.domVideo = subnode.dom
+                  Helper.checkCreated(vnode)
+                },
+              }),
           m('div',
             m('img', {
               oncreate: function(subnode) {
