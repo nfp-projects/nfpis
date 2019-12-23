@@ -12,7 +12,7 @@
 //in the console. 
 window.components = {}
 
-const m = require('mithril')
+var m = require('mithril')
 
 m.route.setOrig = m.route.set
 m.route.set = function(path, data, options){
@@ -26,11 +26,11 @@ m.route.link = function(vnode){
   window.scrollTo(0, 0)
 }
 
-const Front = require('./front')
-const Hosting = require('./hosting')
-const Programming = require('./programming')
-const Streaming = require('./streaming')
-const Footer = require('./footer')
+var Front = require('./front')
+var Hosting = require('./hosting')
+var Programming = require('./programming')
+var Streaming = require('./streaming')
+var Footer = require('./footer')
 
 m.route.prefix = ''
 m.route(document.getElementById('container'), '/', {

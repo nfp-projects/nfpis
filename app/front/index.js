@@ -1,10 +1,10 @@
-const m = require('mithril')
-const Helper = require('../helper')
+var m = require('mithril')
+var Helper = require('../helper')
 
-const Front = {
+var Front = {
   oninit: function(vnode) {
     Helper.init(vnode, 'frontpage', {
-      ratio: 0.85,
+      ratio: 0.91,
     })
   },
 
@@ -20,7 +20,7 @@ const Front = {
           })
         },
       }, m('div.container', [
-          m('video', {
+          !vnode.state.isMobile ? m('video', {
               oncreate: function(subnode) {
                 vnode.state.domVideo = subnode.dom
                 Helper.checkCreated(vnode)
@@ -39,7 +39,12 @@ const Front = {
                 type: 'video/webm',
               }),
             ]
-          ),
+          ) : m('div', {
+                oncreate: function(subnode) {
+                  vnode.state.domVideo = subnode.dom
+                  Helper.checkCreated(vnode)
+                },
+              }),
           m('div',
             m('img', {
               oncreate: function(subnode) {
@@ -58,8 +63,8 @@ const Front = {
             m(m.route.Link, { href: '/video-solutions' }, [ 'Videólausnir', m('div') ]),
           ]),
           m('div.content', [
-            m('h1', 'Næsta kynslóð'),
-            m('h2', 'með nútíma lausnir!'),
+            m('h1', 'Nýjir tímar kalla á nýjar lausnir'),
+            m('h2', '...og við erum með þær'),
           ]),
         ])
       ),
@@ -67,7 +72,7 @@ const Front = {
         // Solutions
         m('article.solution', [
           m('h3', [
-            'Við erum með lausnina',
+            'Hvað getum við gert fyrir þig?',
             m('div.left'),
             m('div.right'),
           ]),
@@ -84,12 +89,10 @@ const Front = {
               }, [
                 m('h5', 'Þínar þarfir'),
                 m('p', `
-                  Hvað svo sem þarfir þínar kunna að vera, að þá munt
-                  komast í samband við lið sem hefur tugi ára reynslu
-                  í að vinna með fólki og leysa vandamál. Við erum
-                  stoltir að koma alltaf með einfalda lausn en líka
-                  ódýra, allt til að mæta hverjum og einum og þeirra
-                  þarfir.
+                  Þarfir fólks og fyrirtækja eru margvíslegar og krefjast
+                  oft sérstæðrar nálgunar. Starfslið okkar hefur víðtæka
+                  reynslu í þarfagreiningu og útfærslum á ýmsum sviðum
+                  hins stafræna nútíma. 
                 `),
               ]),
               m('div.item', {
@@ -103,10 +106,10 @@ const Front = {
               }, [
                 m('h5', 'Okkar lausnir'),
                 m('p', `
-                  Hvort heldur sem þú ert að leitast eftir hugbúnað,
-                  hýsingu, vefsíðu eða forritunarlausnum að þá erum
-                  við fjölhæfir og alltaf tilbúnir til leiks. Við
-                  elskum að taka að okkur krefjandi verkefni.
+                  Hvort sem þú ert að leitast eftir hýsingu, hugbúnaðargerð,
+                  vefhönnun, streymi- eða upptökulausnum, þá erum við með
+                  þekkinguna og reynsluna. Við erum alltaf tilbúnir til
+                  leiks og elskum að taka að okkur krefjandi verkefni.
                 `),
               ]),
             ]),
@@ -116,10 +119,8 @@ const Front = {
                   dom: subnode.dom,
                   className: 'visible',
                   threshold: -100,
+                  img: '/assets/images/solutions.svg',
                 })
-              },
-              style: {
-                backgroundImage: 'url("/assets/images/solutions.svg")',
               },
             }),
           ]),
@@ -137,11 +138,10 @@ const Front = {
                   })
                 },
               }, [
-                m('h3', 'Hýsingarlausnir sniðnar að þínum þörfum'),
+                m('h3', 'Hýsingarlausnir'),
                 m('p', `
-                  Hvort heldur sem þig vantar vefsíðuhýsingu,
-                  sýndarvélar, gagnageymslu eða einhvers konar vennsl
-                  á myndagögnum, að þá getum við fundið lausn sem
+                  Hvort heldur sem þig vantar vefhýsingu, sýndarvélar eða
+                  geymslu og meðhöndlun gagna þá getum við fundið lausn sem
                   hentar þér.
                 `),
                 m(m.route.Link, { class: 'next', href: '/hosting-solutions' }, 'Lesa meira'),
@@ -153,10 +153,8 @@ const Front = {
                   dom: subnode.dom,
                   className: 'visible',
                   threshold: -100,
+                  img: '/assets/images/hosting.svg',
                 })
-              },
-              style: {
-                backgroundImage: 'url("/assets/images/hosting.svg")',
               },
             }),
           ]),
@@ -176,9 +174,9 @@ const Front = {
               }, [
                 m('h3', 'Forritunarlausnir'),
                 m('p', `
-                  Við höfum með okkur yfir 20 ára reynslu í forritun og
-                  hugbúnaðargerð. Ef þig vantar sérlausn eða aðstoð með
-                  þín verkefni að þá getum við hjálpað þér að leysa úr því.
+                  Ef þig vantar sérlausn eða aðstoð með þín verkefni að þá
+                  getum við hjálpað þér. Við höfum yfir 20 ára reynslu í
+                  forritun og hugbúnaðargerð. 
                 `),
                 m(m.route.Link, { class: 'next', href: '/programming-solutions' }, 'Lesa meira'),
               ]),
@@ -189,10 +187,8 @@ const Front = {
                   dom: subnode.dom,
                   className: 'visible',
                   threshold: -100,
+                  img: '/assets/images/programming.svg',
                 })
-              },
-              style: {
-                backgroundImage: 'url("/assets/images/programming.svg")',
               },
             }),
           ]),
@@ -210,13 +206,11 @@ const Front = {
                   })
                 },
               }, [
-                m('h3', 'Streymi og vídeólausnir'),
+                m('h3', 'Streymi- og upptökulausnir'),
                 m('p', `
-                  Það skiptir engu þó þú sért með þúsund manna
-                  ráðstefnur eða litla hádegisfundi í fundarsölum.
-                  Það getur alltaf borgað sig að bjóða upp á streymi
-                  fyrir þá sem ekki geta komist. Við höfum mörg ára
-                  reynslu í því og getum unnið í hvaða sal sem er.
+                  Hvort sem er að ræða fundi eða ráðstefnur þá tökum við að
+                  okkur upptökur og streymingu á þeim. Við höfum margra ára
+                  reynslu og getum unnið í hvaða sal sem er.
                 `),
                 m(m.route.Link, { class: 'next', href: '/video-solutions' }, 'Lesa meira'),
               ]),
@@ -227,10 +221,8 @@ const Front = {
                   dom: subnode.dom,
                   className: 'visible',
                   threshold: -100,
+                  img: '/assets/images/video.svg',
                 })
-              },
-              style: {
-                backgroundImage: 'url("/assets/images/video.svg")',
               },
             }),
           ]),

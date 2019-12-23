@@ -1,7 +1,7 @@
-const m = require('mithril')
-const Helper = require('../helper')
+var m = require('mithril')
+var Helper = require('../helper')
 
-const Streaming = {
+var Streaming = {
   oninit: function(vnode) {
     Helper.init(vnode, 'streaming')
   },
@@ -60,8 +60,8 @@ const Streaming = {
             m(m.route.Link, { class: 'active', href: '/video-solutions' }, [ 'Videólausnir', m('div') ]),
           ]),
           m('div.content', [
-            m('h1', 'Ráðstefnur og fundir'),
-            m('h2', 'Streymi- og vídeóupptökulausnir!'),
+            m('h1', 'Streymi- og upptökulausnir'),
+            m('h2', 'Fyrir ráðstefnur og fundi á tækniöld'),
           ]),
         ])
       ),
@@ -75,10 +75,8 @@ const Streaming = {
                   dom: subnode.dom,
                   className: 'visible',
                   threshold: -100,
+                  img: '/assets/images/videoconference.svg',
                 })
-              },
-              style: {
-                backgroundImage: 'url("/assets/images/videoconference.svg")',
               },
             }),
             m('aside', [
@@ -91,17 +89,19 @@ const Streaming = {
                   })
                 },
               }, [
-                m('h3', 'Það er ekkert eins leiðinglegt og að missa af viðburði'),
+                m('h3', 'Ekki missa af neinu!'),
                 m('p', `
-                  Fyrir þá sem ekki komast eða fyrir þá sem eiga við fötlun að
-                  stríða, getur verið erfitt fyrir þá að komast á fundi eða
-                  viðburði. Þessvegna höfum við boðið upp á fundarstreymi og
-                  ráðstefnustreymi fyrir hvaða viðburð sem er.
+                  Aðstæður fólks eru æði ólíkar og ekki geta allir komist á
+                  alla viðburði, hvort sem er vegna fjarlægðar, fötlunar eða
+                  tímaleysis. Við bjóðum upp á upptöku og streymiþjónustu
+                  fyrir hvers kyns viðburði til að færa þá nær fólki í tíma
+                  og rúmi. 
                 `),
                 m('p', `
-                  Innifalið er alltaf streymigluggi, upptöku og úrvinnslu
-                  gagna með sundurbrotið vídeó eftir ræðumanni eða umræðuefni,
-                  tilbúið til birtingar á netinu eða henda í youtube.
+                  Innifalið í þjónustunni er streymigluggi, upptaka og
+                  úrvinnsla myndefnis með sundurgreiningu eftir ræðumanni
+                  eða umræðuefni, tilbúið til birtingar á netinu og/eða
+                  í varðveislu á stafrænu formi.
                 `),
               ]),
             ]),

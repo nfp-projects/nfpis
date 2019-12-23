@@ -1,21 +1,43 @@
-const m = require('mithril')
+var m = require('mithril')
+var Helper = require('./helper')
 
-const Footer = {
-  oninit: function() {
+var Footer = {
+  oninit: function(vnode) {
+    vnode.state.scrollListenerWaiting = []
   },
 
-  view: function() {
+  view: function(vnode) {
     return [
-      m('div.innerbox', [
-        m('div.image'),
-        m('aside', [
-          m('h3', 'Hafðu samband'),
-          m('p', `
-            Sendu okkur email og lýstu þínum þörfum og við munum koma til móts
-            við þín. Við erum ekki feimnir og höfum alltaf gaman að því að
-            hefja nýja vináttusambönd við alla okkar viðskiptavini.
-          `),
-          m('h5', 'nfp@nfp.is'),
+      m('div.outerbox', [
+        m('div.innerbox', [
+          m('div.image', {
+            oncreate: function(subnode) {
+              Helper.scrollAddItem(vnode, {
+                dom: subnode.dom,
+                className: 'visible',
+                threshold: -100,
+                img: '/assets/images/contact.svg',
+              })
+            },
+          }),
+          m('aside', [
+            m('h3', 'Hafðu samband'),
+            m('p', `
+              Sendu okkur tölvupóst og lýstu þínum þörfum. Við munum setja okkur
+              inn í málin og finna lausnir. Við bjóðum persónulega og
+              metnaðarfulla þjónustu fyrir alla okkar viðskiptavini.
+            `),
+            m('h5', 'nfp@nfp.is'),
+          ]),
+        ]),
+        m('div.meta', [
+          m('span', 'NFP ehf.'),
+          m('span', 'nfp@nfp.is'),
+          m('span', 'kt. 410915-1380'),
+          m('span', [
+            'Bakgrunnsmyndir frá ',
+            m('a', { href: 'https://www.freepik.com/pikisuperstar' }, 'pikisuperstar úr freepik.com'),
+          ]),
         ]),
       ]),
     ]

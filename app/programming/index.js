@@ -1,7 +1,7 @@
-const m = require('mithril')
-const Helper = require('../helper')
+var m = require('mithril')
+var Helper = require('../helper')
 
-const Programming = {
+var Programming = {
   oninit: function(vnode) {
     Helper.init(vnode, 'programming')
   },
@@ -75,10 +75,8 @@ const Programming = {
                   dom: subnode.dom,
                   className: 'visible',
                   threshold: -100,
+                  img: '/assets/images/programmingintro.svg',
                 })
-              },
-              style: {
-                backgroundImage: 'url("/assets/images/programmingintro.svg")',
               },
             }),
             m('aside', [
@@ -93,18 +91,18 @@ const Programming = {
               }, [
                 m('h3', 'Vefsíðuforritun'),
                 m('p', `
-                  Með margra ára reynslu í forritun og mikla þekkingu þegar
-                  kemur að vefsíðugerð, að þá er ekkert sem hefur stoppað okkur
-                  í að leysa krefjandi verkefni. Hvort heldur sem það er flókin
-                  útfærsla á hönnun og innleiðing þess í HTML/CSS eða setja
-                  upp greiðslugáttir og áskriftaleiðir hjá mismunandi aðilum
-                  að þá erum við sérfræðingar í þeim hlutum.
+                  Með margra ára reynslu í forritun og yfirgripsmikla
+                  þekkingu þegar kemur að vefsíðugerð, er ekkert sem stoppar
+                  okkur í að leysa krefjandi verkefni. Hvort heldur sem um
+                  er að ræða útfærslu á hönnun og innleiðing hennar í
+                  HTML/CSS eða uppsetningu greiðslugátta og áskriftaleiða
+                  hjá mismunandi aðilum að þá erum við sérfræðingar á því
+                  sviði.
                 `),
                 m('p', `
-                  Forritunartungumál skipta okkur ekki máli enda er það bara
-                  tól til að vinna með. Hvaða tækni sem þú notar, node eða
-                  python eða C# eða hvað svo sem það er, að þá lætur það ekkert
-                  stoppa okkur.
+                  Við getum unnið með hvaða forritunartungumál sem er.
+                  Hvaða tækni sem þú notar, node, python, C# eða hvað
+                  annað tungumál, þá látum við ekkert stoppa okkur.
                 `),
               ]),
             ]),
@@ -118,10 +116,8 @@ const Programming = {
                   dom: subnode.dom,
                   className: 'visible',
                   threshold: -100,
+                  img: '/assets/images/programmingstore.svg',
                 })
-              },
-              style: {
-                backgroundImage: 'url("/assets/images/programmingstore.svg")',
               },
             }),
             m('aside', [
@@ -136,18 +132,17 @@ const Programming = {
               }, [
                 m('h3', 'Sölukerfi og vefverslun'),
                 m('p', `
-                  Okkar mesta stolt var að búa til sölukerfi frá grunni í
-                  síðuformi, byggt frá grunni til að vera einföld í notkun
-                  og henta lítil fyrirtæki. Sölukerfið býður upp á pantana-
-                  og birgðakerfi sem og vefverslunarframenda. Allt kerfið er
-                  svo hægt að fá í einum pakka, með eða án posa og tilbúið til
-                  notkunar.
+                  Við höfum hannað og þróað sölukerfi frá grunni í síðuformi.
+                  Það er byggt til að vera einfalt í notkun og henta fyrir
+                  lítil og meðalstór fyrirtæki. Sölukerfið býður upp á
+                  pantanakerfi, verkbókhald og birgðakerfi sem og
+                  vefverslunarframenda og tengingu við posa.
                 `),
                 m('p', `
-                  Við höfum einnig breytt vefverslunarframendanum til að passa
-                  fyrir hvert fyrirtæki og þeirra vörumerki. Við vinnum með
-                  hverjum og einum og pössum upp á að skilja aldrei frá hlutum
-                  fyrr en allir eru sáttir.
+                  Við getum aðlagað vefverslunarframendanum til að passa
+                  fyrir hvert fyrirtæki og þeirra vöruframboði. Við vinnum
+                  náið með hverjum og einum viðskiptavini og skilum af okkur
+                  lausn sem uppfyllir þarfir þeirra.
                 `),
               ]),
             ]),
@@ -161,10 +156,8 @@ const Programming = {
                   dom: subnode.dom,
                   className: 'visible',
                   threshold: -100,
+                  img: '/assets/images/programmingcontractor.svg',
                 })
-              },
-              style: {
-                backgroundImage: 'url("/assets/images/programmingcontractor.svg")',
               },
             }),
             m('aside', [
@@ -177,18 +170,19 @@ const Programming = {
                   })
                 },
               }, [
-                m('h3', 'Verktakavinna heim til þín'),
+                m('h3', 'Verktakavinna'),
                 m('p', `
-                  Ef það er tímapressa hjá þér, að þá erum við alltaf tilbúnir
-                  að koma beint inn í hús til ykkar og vinna verktakavinnu
-                  á ykkar vinnustað. Við vinnum alltaf með ykkar fólki og
-                  getum aðlagast hvaða vinnureglum sem er.
+                  Ef það er tímapressa hjá þér, að þá getum við komið beint
+                  til ykkar og unnið verktakavinnu á ykkar vinnustað. Við
+                  getum unnið náið með ykkar fólki og aðlagast hvaða
+                  vinnureglum sem er.
                 `),
                 m('p', `
-                  Okkar fólk hefur verið vel tekið hvert sem við förum og
-                  höfum alltaf skilið hlutum frá okkur í tilbúnu formi.
-                  Hverjar svo sem sem vandamálin kunna að liggja að þá geturðu
-                  treyst því að við munum finna lausn saman og redda málunum.
+                  Okkar fólki hefur verið vel tekið hvert sem við förum og
+                  við höfum ætíð kappkostað að skila frá okkur góðu verki.
+                  Hverjar svo sem sem vandamálin kunna að liggja að þá
+                  geturðu treyst því að við munum finna lausn á þeim
+                  saman og redda málunum.
                 `),
               ]),
             ]),

@@ -1,7 +1,7 @@
-const m = require('mithril')
-const Helper = require('../helper')
+var m = require('mithril')
+var Helper = require('../helper')
 
-const Hosting = {
+var Hosting = {
   oninit: function(vnode) {
     Helper.init(vnode, 'hosting')
   },
@@ -60,8 +60,8 @@ const Hosting = {
             m(m.route.Link, { href: '/video-solutions' }, [ 'Videólausnir', m('div') ]),
           ]),
           m('div.content', [
-            m('h1', 'Hýsingar sem þú getur treyst'),
-            m('h2', 'Sýndarvélar, Wordpress, geymsluhýsing, og hvað eina!'),
+            m('h1', 'Hýsingarlausnir sem þú getur treyst'),
+            m('h2', 'SÝNDARVÉLAR, WORDPRESS, GEYMSLUHÝSING, OG HVAÐ EINA!'),
           ]),
         ])
       ),
@@ -75,10 +75,8 @@ const Hosting = {
                   dom: subnode.dom,
                   className: 'visible',
                   threshold: -100,
+                  img: '/assets/images/hostintro.svg',
                 })
-              },
-              style: {
-                backgroundImage: 'url("/assets/images/hostintro.svg")',
               },
             }),
             m('aside', [
@@ -93,21 +91,20 @@ const Hosting = {
               }, [
                 m('h3', 'Vefhýsing'),
                 m('p', `
-                  Við höfum boðið okkar viðskiptavinum upp á
-                  margskonar lausnir þegar kemur að hýsa þeirra vefi.
-                  Meðal þess sem við höfum reynslu af er bæði að
-                  setja upp sýndarvélar sem þú getur haft fulla umsjá
-                  með og gert hvað svo sem þig lystir með en við
-                  einnig sérhæfum okkur í að bjóða upp á lausnir
-                  þar sem við setjum allt upp og sjáum um allan umsjá
-                  og leyft þér að hafa athyglina frekar á þín málefni.
+                  Við getum boðið okkar viðskiptavinum upp á margskonar
+                  lausnir þegar kemur að hýsa þeirra vefi. Meðal þess sem
+                  við höfum reynslu af er að setja upp sýndarvélar sem þú
+                  getur haft fulla umsjá með og gert hvað svo sem þig lystir
+                  með en einnig sérhæfum okkur í að bjóða upp á
+                  alsherjarlausnir þar sem við sjáum um alla uppsetningu og
+                  umsjón svo að þú getir haft athyglina á öðrum þáttum
+                  reksturs þíns.
                 `),
                 m('p', `
-                  Ef þig vantar Wordpress/PHP uppsetningu eða
-                  kannski ert með sérhæfari síðu og vilt nota
-                  docker eða node að þá skiptir það okkur ekki
-                  neinu máli. Okkar kerfi geta séð um að mæta þínum
-                  þörfum.
+                  Ef þig vantar Wordpress/PHP uppsetningu eða hefur sérhæfða
+                  síðu og vilt nota docker eða node þá munar okkur ekki um
+                  það. Okkar kerfi geta séð um að mæta þínum þörfum hverjar
+                  sem þær eru.
                 `),
               ]),
             ]),
@@ -121,10 +118,8 @@ const Hosting = {
                   dom: subnode.dom,
                   className: 'visible',
                   threshold: -100,
+                  img: '/assets/images/hostfile.svg',
                 })
-              },
-              style: {
-                backgroundImage: 'url("/assets/images/hostfile.svg")',
               },
             }),
             m('aside', [
@@ -137,21 +132,20 @@ const Hosting = {
                   })
                 },
               }, [
-                m('h3', 'Gagnageymslur og myndavennsl'),
+                m('h3', 'Gagnageymslur og skölun myndefnis'),
                 m('p', `
-                  Að vera með örugga geymslu fyrir gögn getur verið mjög
-                  mikilvægt fyrir fyrirtæki. NFP ehf. hefur boðið upp á
-                  stórar gagnageymslur á okkar vélbúnaði fyrir fyrirtæki
-                  til að geyma sín afrit eða vinnlugögn sem þeirra
-                  starfsmanna þurfa hafa aðgang að og vinna með hvar
-                  svo sem þeir eru staddir í heiminum.
+                  Örugg geymsla gagna er sífellt mikilvægari þáttur fyrir
+                  fyrirtæki. NFP ehf. hefur boðið upp á gagnageymslu fyrir
+                  fyrirtæki til að geyma sín afrit eða vinnslugögn sem
+                  starfsmenn geta haft aðgang að og unnið með hvar sem
+                  þeir eru staddir í heiminum. 
                 `),
                 m('p', `
-                  Við höfum líka haft góða reynslu að sjá um vinnslu og
-                  hýsingu á myndum og þess háttar og séð um öll vennsl
-                  sem krafist er til þeirra. Hvort heldur sem það er að
-                  enkóða vídeó fæla eða ljósmyndir í mismunandi upplausnum
-                  fyrir vefsíðubirtingar hvað svo sem þarf að gera.
+                  Við getum einnig séð um hvers kyns meðhöndlun myndgagna
+                  svo sem endurkóðun upptökuefnis til að lágmarka rýmisþörf
+                  með bestu mögulegu gæðum eða skölun á myndum fyrir
+                  vefsíðubirtingar. Lausnir okkar eru skilvirkar og
+                  afkastamiklar.
                 `),
               ]),
             ]),
@@ -165,10 +159,8 @@ const Hosting = {
                   dom: subnode.dom,
                   className: 'visible',
                   threshold: -100,
+                  img: '/assets/images/hostmanaged.svg',
                 })
-              },
-              style: {
-                backgroundImage: 'url("/assets/images/hostmanaged.svg")',
               },
             }),
             m('aside', [
@@ -183,18 +175,16 @@ const Hosting = {
               }, [
                 m('h3', 'Láttu okkur sjá um viðhaldið'),
                 m('p', `
-                  Það getur reynst kúnst að viðhalda sýndarvélum og
-                  heimasíðum. Það er alls ekki fyrir alla að gera
-                  Wordpress uppfærslur eða gera prófanir á öryggisafrit
-                  og að þau séu að afritast rétt.
+                  Það getur verið kúnst að viðhalda sýndarvélum og
+                  heimasíðum og Það er ekki á allra hendi að framkvæma
+                  Wordpress uppfærslur eða prófanir á öryggisafritum.
                 `),
                 m('p', `
-                  Viðhald á búnaði ætti alls ekki að vera eitthvað sem
-                  allir kunna. Þess vegna höfum við boðið upp á þann
-                  valkost að sjá um allt svoleiðis eftir aðstæðum fyrir
-                  þá sem vilja eignast þann kost. Við gerum reglulegar
-                  uppfærslur og fylgjumst með netheiminum og því sem
-                  er að gerast þar.
+                  Þú átt að geta einbeitt þér að þínu sérsviði. Þess vegna
+                  bjóðum við upp á að sjá um allt sem kemur að viðhaldi og
+                  gæðaeftirliti. Við fylgjumst vel með þróuninni, gerum
+                  reglulegar uppfærslur og tryggjum að allt virki sem
+                  skildi.
                 `),
               ]),
             ]),
