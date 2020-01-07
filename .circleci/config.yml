@@ -38,10 +38,6 @@ jobs:
       - deploy:
           name: Deploy to production
           command: |
-            if [ "${CIRCLE_BRANCH}" != "master" ]; then
-              echo Not running on master. Exiting.
-              exit 0
-            fi
             mkdir ~/.ssh/
             echo "$MASTER_HOST" | base64 -d > ~/.ssh/master_host
             echo "$MASTER_KEY" | base64 -d > ~/.ssh/master_key
