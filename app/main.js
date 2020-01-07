@@ -27,16 +27,10 @@ m.route.link = function(vnode){
 }
 
 var Front = require('./front')
-var Hosting = require('./hosting')
-var Programming = require('./programming')
-var Streaming = require('./streaming')
 var Footer = require('./footer')
 
 m.route.prefix = ''
 m.route(document.getElementById('container'), '/', {
   '/': Front,
-  '/hosting-solutions': Hosting,
-  '/programming-solutions': Programming,
-  '/video-solutions': Streaming,
 })
 m.mount(document.getElementById('footer'), Footer)

@@ -52,27 +52,23 @@ var Front = {
                 Helper.lazyLoadImage(vnode, 'domImg', '/assets/cover/frontpage.jpg')
                 Helper.checkCreated(vnode)
               },
-              src: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAQCAwMDAgQDAwMEBAQEBQkGBQUFBQsICAYJDQsNDQ0LDAwOEBQRDg8TDwwMEhgSExUWFxcXDhEZGxkWGhQWFxb/2wBDAQQEBAUFBQoGBgoWDwwPFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhb/wgARCABaAKADASIAAhEBAxEB/8QAGgAAAwEBAQEAAAAAAAAAAAAAAgMEAQAFB//EABkBAQEBAQEBAAAAAAAAAAAAAAECAAMEBf/aAAwDAQACEAMQAAAB+fctH2/iXeVbCXGuni5OaBWbztuNz9PnjWrPE2zT5h18PkJrjOnsFG6uRzkootzKNxwotobs1ezjvBwuphfgk1rSNdy5uN01MW4+RUEUZZ9QZaL5pZlDkIulMruzVrU6b0VTBh0uKnox8JcbYpeKfDwtfKy4vf5xdOd8yNRnGSJ49ypbUzSsII6Bhr8/TCAlPu657eYHFXLcBobWoYjail8FNS6SpOJV0jHTz9DfJ6TPrriILonHqhG1CDx25jnYvaHWSX1znHGUFndU/wD/xAAhEAADAAICAwADAQAAAAAAAAAAAQIQEQMgEiExEyJBQv/aAAgBAQABBQKnomi/nMhoazsQkeLGsSxo8B8Xq51jleyH7q/XI8NDRo0SiEPQ9D0cSR4IekO1rmYxVi2POjQlhMqjZsm9H5CmbGNCoVlMQxCHljyiUeA4ND0KiWJbNaGySPZaxJQ8MRLFfqqLY2SShVpclmxUcfIO9n9lFIrrsbHRs4hsqjeUyWQzzHRWNZYx4iiqN9EJio2eRskZo0Uhjwhvuuks2JiKkpDRrDwukSeH63mTYmcbGx9dCgc4Qq0fl9N7ymbJJ+VWIKWYJOT4+iH04/v+f6/kjP/EABwRAAIDAQEBAQAAAAAAAAAAAAABAhARIBIhQf/aAAgBAwEBPwFISNNN4TEZ2zRSJU4jTVK1EURx+nkwaHE82rfGGDQhOpPBPTDKwkYfp//EABwRAAMBAAIDAAAAAAAAAAAAAAABERAgIQISMP/aAAgBAgEBPwG5ONHl+ME8TLxpTxfR7FExMuseJ6mUpcaKJUfRRMpRMuf/xAAUEAEAAAAAAAAAAAAAAAAAAABw/9oACAEBAAY/AnD/xAAbEAEBAQEBAQEBAAAAAAAAAAABABEQISAxQf/aAAgBAQABPyF1bwG+ndzIb1wzwS9mkYTJN0kMx4G8e9hhxlt58hqUyJxeJCspGCwlsc9TfWDDpb4ZQ0nZUVl5+NuXq8XqPnOw63gn78Nr2cUnxQ8QOKsCzn9hyIhxmxT1vDmdnijSeXBgEGzxhztY4PO8wEYcWrb8SAI0lrBMzpdYcGb9I3wXLYnqDhh5wGIJi23LwZO/KXlevJumQ2/srbbNtGDPDbEvJ6DzmSWWwxqSUgyRlov4cyw3jM9Mc1JtrDYt4X7j5Cfvj1+oj4L2P1f/2gAMAwEAAgADAAAAEJfK1cHvJurU1ZyigO6xZhbQ1tS7V0hPtb08C1iCrD9IB0dS0jX6/HNHdekp0f/EABgRAQEBAQEAAAAAAAAAAAAAAAEAERAh/9oACAEDAQE/ENSYhkBkFvHCSazlg8ktnWCyxB4AIFZElJZRJt6WVtAHG/HxLjbyR6+wsZScWY7bGSccljCDJLDLOw9ywcf/xAAbEQEBAQADAQEAAAAAAAAAAAABABEQITFRMP/aAAgBAgEBPxBxbs6syBlS2+ODdre4bLznJJjSwka4SeHE/kVp0tQwvpaStlEIT20vUUOpeStq3NCh0v/EAB4QAQEBAQEBAQEBAQEAAAAAAAEAESExEEFRYbEg/9oACAEBAAE/EOyheLb6MeWjwlPy0pSYKt4hOHkL8jDZMJvpI+MreSMJZMI5B3YeNib2yuxZ5dvPgu3hyINJjOFrvkqGxy2PJL+WnxI8u1wVkzdkHvznOy7xv8LP4CrI2fc2dPWF/YvjY/bvbL/Znbd5AdGBxsftdrhPV6p4xiSHKM625YW3ELWAb38gf5J/ZWItFEubFsMFi0tcS+wUzJB7Dfhw2V8E3ht9bNvs6hAtln8ujGXfZj9mDv0dHexEFy3sjJhT9gY2Y7sqZto2TWxZIvtt+yMMlH2Vw2A6sZm3uYeDKy3ESwmS9TIM2RPZF9+NllYfs2Zs/wBreZts9n6RxyReQw8kyTYXMhqy5FDfiO2iFsY2W2LG8t71iU2Nhd2Knkfy8sCkT4uSNQoQ7B1zyI4T3IYCBvti8ZXOxc7IPYlkHs/7+GmT4RXlo7A9R6Fp6WxdmGeIm77NElszIzjGNYHE+Xu8Is8Ihc/Pu2F33/xniPbyn/i/7wM8nnnz/9k=',
+              src: ' data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAlgCWAAD/2wBDAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5Ojf/2wBDAQoKCg0MDRoPDxo3JR8lNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzf/wAARCABaAKADASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAAAgEDBAUGAAf/xAApEAACAQMCBQUBAQEBAAAAAAAAAQIDBBEFURIhMUFCExQyUmEiFQZi/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAECA//EABgRAQEBAQEAAAAAAAAAAAAAAAABEQIS/9oADAMBAAIRAxEAPwD1vIuQMnZMtHMnZAyLkAsnCZOAXJ2RDshC5FyNuWBHUQDuReIjuqgXW/QuJXEdxohut+g+v+jBYKQrkQFcpdwJ3aS6jBOnVS7kepcLcr6t3nuR3cZfUYLGVfI26mSEqv6Gqq3LirJVVuEqi3MdDX4t/IlUtcg/IzibGpUkLxIoKerwl5IeWpwfkXBdcSF41uUv+lH7CPU4ryGC6dRLuNTrpdyjq6tFeRDq6svsXE1oZ3K3GZXS3M1U1ZfYYnqy+xcPUal3S3AldLcy61ZfY56on5DD00c7tbjMr3Hcz0tST8hmeoZ7lxPTRu+/RuV7nuZuV/8AoPv/ANLjPpoHdZ7ne6W5n1fLcX3q3GHpf+8W5zvf0z/vM9zvd/oxfTIrUZryY9T1WcfJlO0C20YnS3ixpqOtzXkS4a88fIxqm9w1UluXUytj/uv7Ay11/YyPqS3BlVluXYllamett+QxPV2/IzLqy3BdaW5dZaKeqt+Q29Sb8ig9Z7neqxpi/Wov7DkdQb8jPKqxyNZ7jTKv/fvcF3/6UnrPcB1mXUXjvs9wfevcpPWZ3rsaYvFevcNXv6UKrsJV2TTGgjefoSvP0oFcPcJXL3GmUzxoBzTI8pgeoc5y73tK4kFGSIfqixqFxPSdlDc2hj1QJVcjC9HWwJMBSbDUJS6FYBxCqQ4rab7C+1muzABSDizlbz2YvozXYAlzOcREmuoaawVDTQgU2N8XMAkORQ3EegZrfMI1gDOB6XQjzeGJVsM8LBcWXD0+S7AOylsaYyqngYqi0WUrRrsNSt5LsDEJpg4bZMdB7CKg89Alda0HNrkX1hpbq45EPT6aUllGx0dQ5ZwCI1DQMr4jk9ASXxNdbRpuK6Eh28ZdEGmFWg5fxOq/8/8Az8Te07KOw5Oyi49AY8mvdHlTz/JT17eVNvketajpamniJldS0ZrLUQlYSaaG8PJe3WmTi3/JCnZSj2CIlMkwiAqMovoPQWCWN803UWEQ6mck+cckWrASFr1Cpoa+pGnoX/k2korYblFbIy6MRU0J/Ui1NCf1N5OMdkMVIR2QRgp6I14katpTgvibyrCOHyRU6hFcL5IqVk6Vs4S6F1p/FBojYXqFjaLmi6xi5tK0kkW9vXylllJR6Im0WaZ1eU60R+M1IqKbe5NoMiypE6SmuhBudPjUT5FkuhzCspdaJGTf8lVcaCueIm5qJbEWtFY6IDzq70Vwy+Ep7i0dJ4wej38Y8L5Ix+qpcT5BKz8oDFannsTpdRuaRLVk1//Z',
             })
           ),
           m('nav', [
-            m(m.route.Link, { class: 'title', href: '/' }, m('span', 'NFP ehf.')),
-            m('div.filler'),
-            m(m.route.Link, { href: '/hosting-solutions' }, [ 'Hýsingarlausnir', m('div') ]),
-            m(m.route.Link, { href: '/programming-solutions' }, [ 'Forritunarlausnir', m('div') ]),
-            m(m.route.Link, { href: '/video-solutions' }, [ 'Videólausnir', m('div') ]),
+            m(m.route.Link, { class: 'title', href: '/' }, m('span', 'Dokument Films')),
           ]),
           m('div.content', [
-            m('h1', 'Nýjir tímar kalla á nýjar lausnir'),
-            m('h2', '...og við erum með þær'),
+            m('h1', 'Independent films and documentaries'),
+            m('h2', 'Einar Thorsteinsson and Skapti Olafsson '),
           ]),
         ])
       ),
       m('main', [
         // Solutions
-        m('article.solution', [
+        m('article.whoami', [
           m('h3', [
-            'Hvað getum við gert fyrir þig?',
+            'What we stand for',
             m('div.left'),
             m('div.right'),
           ]),
@@ -87,12 +83,10 @@ var Front = {
                   })
                 },
               }, [
-                m('h5', 'Þínar þarfir'),
+                m('h5', 'The team'),
                 m('p', `
-                  Þarfir fólks og fyrirtækja eru margvíslegar og krefjast
-                  oft sérstæðrar nálgunar. Starfslið okkar hefur víðtæka
-                  reynslu í þarfagreiningu og útfærslum á ýmsum sviðum
-                  hins stafræna nútíma. 
+                  We are Einar Thorsteinsson and Skapti Olafsson and combined we have 
+                  many years of experience behind us when it comes to TV and movies.
                 `),
               ]),
               m('div.item', {
@@ -104,12 +98,11 @@ var Front = {
                   })
                 },
               }, [
-                m('h5', 'Okkar lausnir'),
+                m('h5', 'What we do'),
                 m('p', `
-                  Hvort sem þú ert að leitast eftir hýsingu, hugbúnaðargerð,
-                  vefhönnun, streymi- eða upptökulausnum, þá erum við með
-                  þekkinguna og reynsluna. Við erum alltaf tilbúnir til
-                  leiks og elskum að taka að okkur krefjandi verkefni.
+                  Dokument Films is a Reykjavik-based film production company
+                  formed in 2019 to make high quality, cost-effective independent
+                  films and documentaries.
                 `),
               ]),
             ]),
@@ -119,14 +112,13 @@ var Front = {
                   dom: subnode.dom,
                   className: 'visible',
                   threshold: -100,
-                  img: '/assets/images/solutions.svg',
+                  img: '/assets/images/team_alt.svg',
                 })
               },
             }),
           ]),
         ]),
-        // Solutions
-        m('article.hosting', [
+        m('article.passion', [
           m('section', [
             m('aside', [
               m('div.item', {
@@ -138,13 +130,17 @@ var Front = {
                   })
                 },
               }, [
-                m('h3', 'Hýsingarlausnir'),
-                m('p', `
-                  Hvort heldur sem þig vantar vefhýsingu, sýndarvélar eða
-                  geymslu og meðhöndlun gagna þá getum við fundið lausn sem
-                  hentar þér.
-                `),
-                m(m.route.Link, { class: 'next', href: '/hosting-solutions' }, 'Lesa meira'),
+                m('h3', 'Documentaries on the rise'),
+                m('p', [
+                  'With the coming of digital age in streaming services, more and more ',
+                  ' people are becoming interested in documentaries. With the advent of ',
+                  'services like ',
+                  m('a', { href: 'https://curiositystream.com/', target: '_blank'}, 'Curiosity Stream'),
+                  ' and ',
+                  m('a', { href: 'https://watchnebula.com/', target: '_blank'}, 'Nebula'),
+                  ', it is clear that people at this day and age are discovering the wonderful ',
+                  'world of documentaries.',
+                ]),
               ]),
             ]),
             m('div.image', {
@@ -153,75 +149,7 @@ var Front = {
                   dom: subnode.dom,
                   className: 'visible',
                   threshold: -100,
-                  img: '/assets/images/hosting.svg',
-                })
-              },
-            }),
-          ]),
-        ]),
-        // Programming
-        m('article.programming', [
-          m('section', [
-            m('aside', [
-              m('div.item', {
-                oncreate: function(subnode) {
-                  Helper.scrollAddItem(vnode, {
-                    dom: subnode.dom,
-                    className: 'visible',
-                    threshold: -100,
-                  })
-                },
-              }, [
-                m('h3', 'Forritunarlausnir'),
-                m('p', `
-                  Ef þig vantar sérlausn eða aðstoð með þín verkefni að þá
-                  getum við hjálpað þér. Við höfum yfir 20 ára reynslu í
-                  forritun og hugbúnaðargerð. 
-                `),
-                m(m.route.Link, { class: 'next', href: '/programming-solutions' }, 'Lesa meira'),
-              ]),
-            ]),
-            m('div.image', {
-              oncreate: function(subnode) {
-                Helper.scrollAddItem(vnode, {
-                  dom: subnode.dom,
-                  className: 'visible',
-                  threshold: -100,
-                  img: '/assets/images/programming.svg',
-                })
-              },
-            }),
-          ]),
-        ]),
-        // Programming
-        m('article.video', [
-          m('section', [
-            m('aside', [
-              m('div.item', {
-                oncreate: function(subnode) {
-                  Helper.scrollAddItem(vnode, {
-                    dom: subnode.dom,
-                    className: 'visible',
-                    threshold: -100,
-                  })
-                },
-              }, [
-                m('h3', 'Streymi- og upptökulausnir'),
-                m('p', `
-                  Hvort sem er að ræða fundi eða ráðstefnur þá tökum við að
-                  okkur upptökur og streymingu á þeim. Við höfum margra ára
-                  reynslu og getum unnið í hvaða sal sem er.
-                `),
-                m(m.route.Link, { class: 'next', href: '/video-solutions' }, 'Lesa meira'),
-              ]),
-            ]),
-            m('div.image', {
-              oncreate: function(subnode) {
-                Helper.scrollAddItem(vnode, {
-                  dom: subnode.dom,
-                  className: 'visible',
-                  threshold: -100,
-                  img: '/assets/images/video.svg',
+                  img: '/assets/images/discover.svg',
                 })
               },
             }),

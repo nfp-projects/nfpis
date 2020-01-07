@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: docker:latest
     environment:
-      - di: "nfpis/nfpis"
+      - di: "nfpis/dokument"
       - dtag: "latest"
     working_directory: ~/nfpis
     steps:
@@ -25,10 +25,10 @@ jobs:
     docker:
       - image: docker:latest
     environment:
-      - di: "nfpis/nfpis"
+      - di: "nfpis/dokument"
       - dtag: "latest"
-      - service_name: "nfpis"
-      - target_port: "7021" # The public target port on the docker host
+      - service_name: "dokument"
+      - target_port: "7031" # The public target port on the docker host
       - service_port: "3000" # The exposed port on the docker
     working_directory: ~/nfpis
     steps:

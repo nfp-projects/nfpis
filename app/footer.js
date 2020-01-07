@@ -21,22 +21,21 @@ var Footer = {
             },
           }),
           m('aside', [
-            m('h3', 'Hafðu samband'),
+            m('h3', 'Contact us'),
             m('p', `
-              Sendu okkur tölvupóst og lýstu þínum þörfum. Við munum setja okkur
-              inn í málin og finna lausnir. Við bjóðum persónulega og
-              metnaðarfulla þjónustu fyrir alla okkar viðskiptavini.
+              Get in touch with us, we are a friendly bunch and we always
+              welcome new partners and contacts.
             `),
-            m('h5', 'nfp@nfp.is'),
+            m('h5', 'einar@dokument.is / skapti@dokument.is'),
           ]),
         ]),
         m('div.meta', [
-          m('span', 'NFP ehf.'),
-          m('span', 'nfp@nfp.is'),
-          m('span', 'kt. 410915-1380'),
+          m('span', 'Dokument ehf.'),
+          m('span', 'einar@dokument.is / skapti@dokument.is'),
+          m('span', 'kt. 631219-2250'),
           m('span', [
-            'Bakgrunnsmyndir frá ',
-            m('a', { href: 'https://www.freepik.com/pikisuperstar' }, 'pikisuperstar úr freepik.com'),
+            'background images from ',
+            m('a', { href: 'https://www.freepik.com/pikisuperstar' }, 'pikisuperstar on freepik.com'),
           ]),
         ]),
       ]),
