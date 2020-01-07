@@ -56,11 +56,15 @@ workflows:
           context: org-global
           filters:
             branches:
-              only: master
+              only:
+                  - master
+                  - dokument
       - deploy:
           context: org-global
           requires:
             - build
           filters:
             branches:
-              only: master
+              only:
+                  - master
+                  - dokument
