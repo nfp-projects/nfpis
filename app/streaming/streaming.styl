@@ -1,0 +1,39 @@
+header.streaming {
+  text-shadow: 0 0 40px black;
+
+  h1 {
+    font-size: 5.7vw;
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-size: 3vw;
+  }
+}
+
+article.streamintro {
+  .image {
+    transform: translate(-50%, 0px);
+  }
+  
+  .visible.image {
+    transform: translate(0px, 0px);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  article {
+    &.streamintro {
+      h3 {
+        padding: 30px 0 30px;
+      }
+      
+      .image {
+        transform: translate(0, 50%);
+      }
+      
+      .visible.image {
+        transform: translate(0px, 0px);
+      }
+    }
+  }
+}

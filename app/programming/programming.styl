@@ -1,0 +1,185 @@
+header.programming {
+  text-shadow: 0 0 30px black;
+  
+  nav a {
+    background-color: #0003;
+    border-radius: 20px;
+    box-shadow: 0 0 80px black;
+    text-shadow: 0 0 80px black;
+    opacity: 1;
+    color: #999;
+    transition: opacity 0.5 color 0.5s;
+    
+    &.title {
+      color: white;
+      opacity: 0.6;
+      
+      &:hover {
+        opacity: 1;
+      }
+    }
+    
+    &:hover {
+      color: white;
+    }
+    
+    &.active {
+      color: white;
+    }
+  }
+
+  h1 {
+    font-size: 5.8vw;
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-size: 3.5vw;
+  }
+  
+  h1, h2 {
+  }
+}
+
+article {
+  &.programmingintro {
+    .image {
+      transform: translate(-50%, 0px);
+    }
+    
+    .visible.image {
+      transform: translate(0px, 0px);
+    }
+  }
+  
+  &.programmingstore {
+    background: #29688c;
+    background: linear-gradient(30deg, #020024 15%, #29688c 100%);
+    color: white;
+    position: relative;
+    height: 80vh;
+    min-height: 600px;
+    
+    section {
+      justify-content: flex-start;
+    }
+    
+    aside {
+      align-items: center;
+      max-width: none;
+
+      .item {
+        width: 100%;
+        max-width: 600px;
+        text-align: left;
+      }
+    }
+    
+    h3 {
+      align-self: flex-start;
+      padding: 10px 0 40px;
+    }
+    
+    .image {
+      position: absolute;
+      right: 0;
+      top: 5%;
+      width: 50%;
+      height: 90%;
+      max-width: none;
+      background-position: center;
+      background-size: contain;
+      transform: translate(50%, 0px);
+    }
+    
+    .visible.image {
+      transform: translate(0px, 0px);
+    }
+  }
+  
+  &.programmingcontracting {
+    .image {
+      transform: translate(-50%, 0px);
+    }
+    
+    .visible.image {
+      transform: translate(0px, 0px);
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  header.programming {
+    nav a {
+      &.title {
+        background-position: calc(50% - 60px) center;
+      }
+    }
+
+    h1 {
+      font-size: 5.8vw;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 3.5vw;
+    }
+    
+    h1, h2 {
+    }
+  }
+  
+  article {
+    &.programmingintro {
+      .image {
+        transform: translate(0, 50%);
+      }
+      
+      .visible.image {
+        transform: translate(0px, 0px);
+      }
+      
+      h3 {
+        padding: 30px 0 30px;
+      }
+    }
+    
+    &.programmingstore {
+      aside {
+        order: 1;
+        flex: 0 1 auto;
+      }
+      
+      h3 {
+        align-self: flex-start;
+        padding: 10px 0 40px;
+      }
+      
+      .image {
+        position: relative;
+        order: 2;
+        width: 100%;
+        padding-top: 430px;
+        height: auto;
+        background-size: auto 100%;
+        background-position: center -17px;
+        transform: translate(0, 50%);
+      }
+      
+      .visible.image {
+        transform: translate(0px, 0px);
+      }
+    }
+    
+    &.programmingcontracting {
+      h3 {
+        padding: 30px 0 30px;
+      }
+      .image {
+        transform: translate(0, 50%);
+      }
+      
+      .visible.image {
+        transform: translate(0px, 0px);
+      }
+    }
+  }
+}

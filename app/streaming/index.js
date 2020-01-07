@@ -72,7 +72,7 @@ var Streaming = {
       ),
       m('main', [
         // Solutions
-        m('article.hostintro', [
+        m('article.streamintro', [
           m('section', [
             m('div.image', {
               oncreate: function(subnode) {
